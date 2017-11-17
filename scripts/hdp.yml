@@ -6,8 +6,8 @@ image_resource:
          repository: debrooy/docker-create-concourse-hbase-image
 
 inputs:
-- name: resource-tutorial
-- name: build-spark
+- name: git-rsrc
+- name: build-spark-hbase
 
 run:
   path: sh
@@ -17,6 +17,6 @@ run:
           ls
           #ln -s build-spark/rootfs/usr/spark-2.2.0/bin /home
           ##chmod 777 spark-submit
-          cd resource-tutorial/proj2
-          chmod 777 run_h.sh
-          ./run_h.sh
+          cd git-rsrc/scripts
+          chmod 777 run.sh
+          ./run.sh
