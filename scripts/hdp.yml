@@ -1,0 +1,22 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: 
+         repository: debrooy/docker-create-concourse-hbase-image
+
+inputs:
+- name: resource-tutorial
+- name: build-spark
+
+run:
+  path: sh
+  args:
+        - -exc
+        - |
+          ls
+          #ln -s build-spark/rootfs/usr/spark-2.2.0/bin /home
+          ##chmod 777 spark-submit
+          cd resource-tutorial/proj2
+          chmod 777 run_h.sh
+          ./run_h.sh
