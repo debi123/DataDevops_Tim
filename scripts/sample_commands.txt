@@ -1,11 +1,3 @@
-create 'employee', 'ericcson'
-put 'employee', 'rowkey', 'ericcson:id', '1'
-put 'employee', 'rowkey1', 'ericcson:id', '2'
-put 'employee', 'rowkey2', 'ericcson:id', '3'
-put 'employee', 'rowkey3', 'ericcson:id', '4'
-put 'employee', 'rowkey3', 'ericcson:id', '5'
-scan 'employee'
-
 create 'tim_ericcson_bulk' , 'ericcson'
 put 'tim_ericcson_bulk', 'rowkey', 'ericcson:client', 'TIM'
 put 'tim_ericcson_bulk', 'rowkey', 'ericcson:area', '71'
