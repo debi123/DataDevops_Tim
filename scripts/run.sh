@@ -27,6 +27,8 @@ apt-get install -y openssh-server
 
 hbase shell ./sample_commands.txt
 
+hbase shell ./count.txt > count_src.txt
+
 ##echo "list" | hbase shell
 
 ##ssh gpadmin@10.63.33.203
