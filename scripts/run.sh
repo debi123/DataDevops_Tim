@@ -27,8 +27,6 @@ apt-get install -y openssh-server
 
 hbase shell ./sample_commands.txt
 
-hbase shell ./count.txt > count_src.txt
-
 ##echo "list" | hbase shell
 
 ##ssh gpadmin@10.63.33.203
@@ -62,9 +60,11 @@ hbase shell ./count.txt > count_src.txt
 
 ###pyspark
 
-# spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
+spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
 
-# hbase shell ./list.txt
+hbase shell ./list.txt
+
+##spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ test_r.py
 
 ##spark-submit 
 
