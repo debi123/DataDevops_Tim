@@ -1,22 +1,25 @@
 #!/bin/sh
 
+python3 --version
+python --version
+
 ##cp spark-env.sh /home/build-spark/rootfs/usr/spark-2.2.0/conf
 ##chmod 777 spark-env.sh
 
-cp trial.csv /home
-chmod 777 trial.csv
+# cp trial.csv /home
+# chmod 777 trial.csv
 
 ##. /opt/hbase-server > a.out
 
-apt-get -y update
+# apt-get -y update
 
-apt-get install -y openssh-server
+# apt-get install -y openssh-server
 
-/opt/hbase/bin/start-hbase.sh
+# /opt/hbase/bin/start-hbase.sh
 
-/opt/hbase/bin/hbase-daemons.sh start zookeeper
+# /opt/hbase/bin/hbase-daemons.sh start zookeeper
 
-/opt/hbase-server
+# /opt/hbase-server
 
 
 ##/opt/hbase/bin/start-hbase.sh
@@ -25,7 +28,7 @@ apt-get install -y openssh-server
 
 ##hbase shell
 
-hbase shell ./sample_commands.txt
+# hbase shell ./sample_commands.txt
 
 ##echo "list" | hbase shell
 
@@ -60,9 +63,9 @@ hbase shell ./sample_commands.txt
 
 ###pyspark
 
-spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
+# spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ run.py
 
-hbase shell ./list.txt
+# hbase shell ./list.txt
 
 ##spark-submit  --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/ test_r.py
 
